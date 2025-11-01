@@ -1,0 +1,14 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+driver = webdriver.Chrome()
+driver.implicitly_wait(10)
+driver.get("https://www.youtube.com")
+driver.maximize_window()
+driver.implicitly_wait(10)
+searchbox_1 =driver.find_element(By.NAME,"search_query")
+searchbox_1.send_keys("indian institute of technology")
+searchbox_1 .send_keys(Keys.RETURN)
+time.sleep(10)
+driver.quit()
+
